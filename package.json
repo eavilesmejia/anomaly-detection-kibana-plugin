@@ -1,21 +1,21 @@
 {
   "name": "opendistro-anomaly-detection-kibana",
-  "version": "1.9.0.0",
+  "version": "1.9.1.0",
   "description": "Open Distro for Elasticsearch Anomaly Detection Kibana plugin",
   "main": "index.js",
   "kibana": {
-    "version": "7.8.0",
+    "version": "7.8.1",
     "templateVersion": "1.0.0"
   },
   "scripts": {
-    "kbn": "node ../../scripts/kbn",
+    "kbn": "node ../../../scripts/kbn",
     "es": "node ../../scripts/es",
     "lint": "eslint .",
     "start": "plugin-helpers start",
     "test:server": "plugin-helpers test:server",
     "test:browser": "plugin-helpers test:browser",
     "test:jest": "../../node_modules/.bin/jest --config ./test/jest.config.js",
-    "build": "plugin-helpers build",
+    "build": "node ../../../packages/kbn-plugin-helpers/bin/plugin-helpers build",
     "release": "./tasks/release.sh",
     "start-cy-server": "yarn start --no-base-path --oss",
     "cy:open": "cypress open",
